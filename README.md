@@ -13,8 +13,8 @@
 8. [Recursos nativo]()
 9. [Librerías de terceros]()
 
-<div id='id1'/>
-## Sobre este repositorio
+
+## Sobre este repositorio<a name="#id1"></a> 
 Este repositorio es creado con el objetivo de ir consolidando las pruebas de concepto necesarias para hacer más sencillo y
 entendible la transición del uso del framework ionic a cualquier proyecto inicial.
 
@@ -28,8 +28,7 @@ La aplicación se creo con la finalidad de brindar una pequeña introducción a 
 * Envío de parámetros entre vistas
 * Uso de UI Components
 
-<div id='id2'/>
-## Estructura de un proyecto en ionic
+<h2 id="id2">Estructura de un proyecto en ionic</h2>
 Al momento de crear un proyecto en ionic, este genera de manera automática una estructura ordenada para el desarrollo de la aplicación.
 Un proyecto en desarrollo se ve de la siguiente manera:
 ![Ionic Project](http://ionictuts.com/wp-content/uploads/2016/12/ionic-project-structure.jpg)
