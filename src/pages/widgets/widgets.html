@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{itemSelected.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-button block (click)="showToast()">
+      Show Dialog/Toast
+    </button>
+
+    <button ion-button block (click)="showAlert()">
+      Show Alert
+    </button>
+
+    <button ion-button block (click)="showModal()">
+      Show Modal
+    </button>
+
+    <button ion-button block (click)="showAllWidgets()">
+      Show All Widgets
+    </button>
+  </ion-list>
+</ion-content>

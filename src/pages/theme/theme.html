@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{itemSelected.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p class="description">{{itemSelected.description}}</p>
+  <p class="ejemplo">Como por ejemplo:</p>
+  <div>
+    <ion-list>
+      <ion-item>
+        <h3 class="header">1. Propiedades</h3>
+        <p #text>Texto cualquiera</p>
+        <button ion-button (click)="setAlignLeft(text)">text left</button>
+        <button ion-button (click)="setAlignCenter(text)">text center</button>
+        <button ion-button (click)="setAlignRight(text)">text right</button>
+      </ion-item>
+      <ion-item>
+        <h3 class="header">2. Colores</h3>
+        <button ion-button color="prymary">prymary</button>
+        <button ion-button color="secondary">secondary</button>
+        <button ion-button color="danger">danger</button>
+        <button ion-button color="light">light</button>
+        <button ion-button color="dark">dark</button>
+      </ion-item>
+      <ion-item>
+        <h3 class="header">3. Grillas</h3>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              1 of 3
+            </ion-col>
+            <ion-col>
+              2 of 3
+            </ion-col>
+            <ion-col>
+              3 of 3
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+    Y muchas otros más, todo ello usando SASS como preprocesador de CSS
+  </div>
+</ion-content>

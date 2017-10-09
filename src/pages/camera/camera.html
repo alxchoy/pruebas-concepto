@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{itemSelected.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>{{itemSelected.description}}</p>
+  <button ion-button block color="primary" (click)="takePicture()">Take a picture</button>
+  <img [src]="base64Image" *ngIf="base64Image" alt="picture">
+</ion-content>
