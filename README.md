@@ -2,6 +2,7 @@
 
 **INDICE**
 1. [Sobre este repositorio](#id1)
+    * [Instalación](#instalacion)
 2. [Estructura de un proyecto en ionic](#id2)
 3. [Ciclo de vida de un componente en ionic](#id3)
 4. [Ionic CLI](#id4)
@@ -27,6 +28,24 @@ La aplicación se creo con la finalidad de brindar una pequeña introducción a 
 * Ciclo de vida de una página
 * Envío de parámetros entre vistas
 * Uso de UI Components
+
+<h3 id="instalacion">Instalación</h3>
+Para instalar la aplicación debe tener en cuenta lo siguiente:
+
+- Instalar Node >7
+- Instalar Cordova
+- Instalar Ionic
+
+Una ves que tengamos lo anterior:
+
+1. Clonamos el proyecto con un `git clone`
+2. Navegamos dentro del proyecto con el comando `cd` e instalamos los módulos `npm install`
+3. Ejecutamos el comando `ionic serve` los cual creará la carpeta `www`y nos permitirá ver la aplicación en un servidor local.
+4. Para restaurar nuestro proyecto, con los plugin y librerías añadidas, y no volver a hacer todo a mano, ejecutamos `ionic cordova prepare`
+5. Finalmente, añadir la carpeta `platforms/android` o `platform/ios` al android studio o xcode para generar el paquete adecuado y mostrarlo en su móvil
+
+**Nota:** Si desea hace algunos cambios, tendría que volver a empaquetar el proyecto `ionic cordova build android` y añadir la carpeta al android studio
+para volverlo a compilar.
 
 
 <h2 id="id2">Estructura de un proyecto en ionic</h2>
