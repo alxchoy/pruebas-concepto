@@ -7,8 +7,8 @@
 4. [Ionic CLI](#id4)
 5. [Diseño de una página](#id5)
 6. [Manejo de widgets](#id6)
-  6. [Dialogs](#id6)
-  6. [Alerts](#id6)
+  * [Toast](#toast)
+  * [Alerts](#alerts)
 7. [Manejo del theme](#id7)
 8. [Recursos nativo](#id8)
 9. [Librerías de terceros](#id9)
@@ -49,7 +49,7 @@ En la aplicación hay una sección que lista todos los ciclos de vida de un comp
 Cabe resaltar que el número de métodos que conforman el ciclo de vida es 8 y no 9 ya que a veces se considera el método constructor() pero este
 es propio de una clase javascript, estándar ES6, y no de Ionic.
 
-Para un mayor detalle de los ciclos de vida puede revisar la documentación de Ionic o este [link](https://www.ion-book.com/blog/tips/lifecycle-ionic/) en el que se explica con más detalle.
+Para un mayor detalle de los ciclos de vida puede revisar la documentación de Ionic o este [LINK](https://www.ion-book.com/blog/tips/lifecycle-ionic/) en el que se explica con más detalle.
 
 
 <h2 id="id4">Ionic CLI</h2>
@@ -63,7 +63,7 @@ Por ejemplo:
 - Compilar el proyecto para la plataforma android: `ionic cordova build android`
 - Compilar el proyecto para la plataforma iOS: `ionic cordova build ios`
 
-Para un mayor detalle del CLI y sus funcionalidades, puede visitar este [link](https://ionicframework.com/docs/cli/).
+Para un mayor detalle del CLI y sus funcionalidades, puede visitar este [LINK](https://ionicframework.com/docs/cli/).
 
 
 <h2 id="id5">Diseño de una página</h2>
@@ -79,8 +79,38 @@ Ionic trae sus propios estilos por default, tanto para android como para ios, lo
 
 <h2 id="id6">Manejo de widgets</h2>
 Como se mencionó anteriormente, Ionic cuenta con sus propios estilos por defecto y además cuenta con una extensa librería de componentes UI.
+
 La [documentación](https://ionicframework.com/docs/components/) de Ionic es la mejor fuente de conocimiento con respecto a este tema ya que se encuentra
 detallado con exactitud cada componente, con ejemplos de implementación y la opción de revisar el código fuente.
+
+<h3 id="toast">Toast</h3>
+Los toast son como dialogos y nos brinda una interacción más estrecha con el usuario y Ionic lo incluye en su librería de componentes UI, así como
+un ejemplo de uso muy didáctico:
+
+```javascript
+import { ToastController } from 'ionic-angular';
+
+export class MyPage {
+  constructor(public toastCtrl: ToastController) {
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'User was added successfully',
+      duration: 3000
+    });
+    toast.present();
+  }
+}
+```
+Luego sólo nos quedaría incluir nuestro método en el html.
+
+```html
+<button (click)="presentToast()">Mostrar toast</button>
+```
+
+
+<h3 id="alerts">Alerts</h3>
 
 
 
