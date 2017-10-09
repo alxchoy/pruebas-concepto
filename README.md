@@ -7,8 +7,8 @@
 4. [Ionic CLI](#id4)
 5. [Diseño de una página](#id5)
 6. [Manejo de widgets](#id6)
-  * [Toast](#toast)
-  * [Alerts](#alerts)
+    * [Toast](#toast)
+    * [Alerts](#alerts)
 7. [Manejo del theme](#id7)
 8. [Recursos nativo](#id8)
 9. [Librerías de terceros](#id9)
@@ -109,8 +109,34 @@ Luego sólo nos quedaría incluir nuestro método en el html.
 <button (click)="presentToast()">Mostrar toast</button>
 ```
 
+<h3 id="alerts">Alert</h3>
+Al igual que el toast, también se incluye el alert en dicha librería.
 
-<h3 id="alerts">Alerts</h3>
+```javascript
+import { AlertController } from 'ionic-angular';
+
+export class MyPage {
+  constructor(public alertCtrl: AlertController) {
+  }
+
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+}
+```
+
+```html
+<button (click)="showAlert()">Mostrar alert</button>
+```
+
+La finalidad de incluir estos ejemplos es para mostrar la facilidad con la que se puede manejar y entender ionic, así como su documentación.
+
+
 
 
 
